@@ -14,9 +14,8 @@ Prod: Docker, MongoDB
 Current TODO:
 --------------------------------------
     - Figure out how to insert data into nestedMongoDB on startup;
-    - Nested mongo DB is run on port 12345. Has a db names "test" there. Fix this name
     - Autofill doesn't work so far.
-    - Also post request on "/employee" doesn't take a employee
+    - Also post request on "/employee" takes only a latin named persons
     - Separate profiles in application.yml
 
 Bugs
@@ -30,3 +29,4 @@ Should be able:
 - crud Employee (so far)
 
 All end points of Actuator are open;
+Nested mongo DB is run on port 12345.

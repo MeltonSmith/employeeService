@@ -22,15 +22,12 @@ public class MongoAutoFillConfigurationClass {
     @Bean
     @SuppressWarnings("unchecked")
     public Boolean preFill(EmployeeReactiveRepository reactiveRepository) throws IOException {
-
-
-
-        reactiveRepository.save( mockkEmployee((long)(Math.random() * 100L)));
-        reactiveRepository.save( mockkEmployee((long)(Math.random() * 100L)));
-        reactiveRepository.save( mockkEmployee((long)(Math.random() * 100L)));
-        reactiveRepository.save( mockkEmployee((long)(Math.random() * 100L)));
-        reactiveRepository.save( mockkEmployee((long)(Math.random() * 100L)));
-        reactiveRepository.save( mockkEmployee((long)(Math.random() * 100L)));
+        reactiveRepository.save(mockkEmployee((long)(Math.random() * 100L)));
+        reactiveRepository.save(mockkEmployee((long)(Math.random() * 100L)));
+        reactiveRepository.save(mockkEmployee((long)(Math.random() * 100L)));
+        reactiveRepository.save(mockkEmployee((long)(Math.random() * 100L)));
+        reactiveRepository.save(mockkEmployee((long)(Math.random() * 100L)));
+        reactiveRepository.save(mockkEmployee((long)(Math.random() * 100L)));
 
         return true;
     }

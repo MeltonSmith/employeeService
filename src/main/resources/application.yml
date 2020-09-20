@@ -27,10 +27,11 @@ management:
     web:
       exposure:
         include: '*'
-#DeV
+
+#DeV embedded mongoDb
 spring:
   data:
     mongodb:
       host: localhost
-      database: test
+      database: employeeServiceDb
       port: 12345
