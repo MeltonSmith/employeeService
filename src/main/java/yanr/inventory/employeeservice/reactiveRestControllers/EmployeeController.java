@@ -1,10 +1,9 @@
 package yanr.inventory.employeeservice.reactiveRestControllers;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import yanr.inventory.employeeservice.domain.Employee;
 import yanr.inventory.employeeservice.reactiveRepos.EmployeeReactiveRepository;
 
@@ -16,22 +15,22 @@ import yanr.inventory.employeeservice.reactiveRepos.EmployeeReactiveRepository;
 @RequestMapping(path = "/employee", produces = "application/json")
 @CrossOrigin(origins = "*")
 public class EmployeeController {
-    private EmployeeReactiveRepository employeeReactiveRepository;
+    private final EmployeeReactiveRepository employeeReactiveRepository;
 
     public EmployeeController(EmployeeReactiveRepository tacoRepo) {
         this.employeeReactiveRepository = tacoRepo;
     }
 
     @GetMapping
-    public Flux<Employee> recentTacos() {
+    public Flux<Employee> employees() {
         return employeeReactiveRepository.findAll().take(12);
     }
 
-//    @PostMapping(consumes = "application/json")
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public Mono<Taco> postTaco(@RequestBody Taco taco) {
-//        return tacoRepo.save(taco);
-//    }
+    @PostMapping(consumes = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono<Employee> postEmployee(@RequestBody Employee employee) {
+        return employeeReactiveRepository.save(employee);
+    }
 //
 //    @GetMapping("/{id}")
 //    public Mono<Taco> tacoById(@PathVariable("id") UUID id) {

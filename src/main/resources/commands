@@ -1,0 +1,22 @@
+{firstName: "Василий", lastName: "Пупкин", middleName: "Агаев", birthDate: "16.11.1992"}
+
+curl http://localhost:8080/employee -H "Content-Type: application/json" -X POST -d '{"firstName": "Василий", "lastName": "Пупкин", "middleName": "Агаев", "birthDate": "16.11.1992"}'
+
+
+curl http://localhost:8080/employee -H "Content-Type: application/json" -X POST -d "{\"firstName": "Василий", "lastName": "Пупкин", "middleName": "Агаев", "birthDate": "16.11.1992"}"
+
+curl -i -H "Content-Type:application/json" http://localhost:8080/employee -X POST -d "{\"firstName\": \"Василий\", \"lastName\": \"Пупкин\", \"birthDate\": \"16.11.1992\", \"middleName\": \"Агаев\"}"
+
+
+Invoke-WebRequest "http://localhost:8080/employee" -Headers @{"Content-Type" = "application/json"} -body @{"firstName": "Василий", "lastName": "Пупкин", "middleName": "Агаев", "birthDate": "16.11.1992"}
+
+Invoke-WebRequest "http://localhost:8080/employee" -Content-Type "application/json" -body @{"firstName": "Василий", "lastName": "Пупкин", "middleName": "Агаев", "birthDate": "16.11.1992"}
+
+
+curl --header "Content-Type: application/json" \
+  --request POST
+  --data '{"firstName": "Василий", "lastName": "Пупкин", "middleName": "Агаев", "birthDate": "16.11.1992"}'
+ http://localhost:8080/employee
+
+
+ curl  - i -X POST -H "Content-Type:application/json" http://localhost:8080/employee -d "{\"firstName\": \"Василий\", \"lastName\": \"Пупкин\", \"middleName\": \"Агаев\", \"birthDate\": \"16.11.1992\"}"
