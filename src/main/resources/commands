@@ -20,3 +20,4 @@ curl --header "Content-Type: application/json" \
 
 //NOTE WORKS with english
 curl  -i -X POST -H "Content-Type:application/json" http://localhost:8080/employee -d "{\"firstName\": \"Melton\", \"lastName\": \"Smith\", \"middleName\": \"None\", \"birthDate\": \"16.11.1992\"}"
+curl  -i -X POST -H "Content-Type:application/json; charset=UTF-8" http://localhost:8080/employee -d "{\"firstName\": \"Иванов\", \"lastName\": \"Петя\", \"middleName\": \"Петров\", \"birthDate\": \"16.11.1992\"}"
