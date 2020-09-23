@@ -1,0 +1,79 @@
+[
+  {
+    "id": "5f6b6d22a251c62b2bc023b0",
+    "firstName": "Gretchen",
+    "lastName": "Leonard",
+    "middleName": "Reyes",
+    "birthdate": "Sun Aug 16 1998 04:02:00 GMT+0600 (Yekaterinburg Summer Time)"
+  },
+  {
+    "id": "5f6b6d22fb81145ad900cb85",
+    "firstName": "Duke",
+    "lastName": "Griffith",
+    "middleName": "Elsie",
+    "birthdate": "Sun Sep 27 2015 10:37:23 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d229da6693af9f01773",
+    "firstName": "Hazel",
+    "lastName": "Coleen",
+    "middleName": "Frost",
+    "birthdate": "Thu Mar 12 1992 20:21:01 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d223d5c8dac3b4d8ed6",
+    "firstName": "Camacho",
+    "lastName": "Joyner",
+    "middleName": "Kemp",
+    "birthdate": "Mon Mar 10 1986 05:20:03 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d229dc01762cba43fe3",
+    "firstName": "Roberta",
+    "lastName": "Dodson",
+    "middleName": "Mcconnell",
+    "birthdate": "Fri Sep 28 1973 11:18:45 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d2257cdfa2a909ff07d",
+    "firstName": "Jenna",
+    "lastName": "Haney",
+    "middleName": "Cantu",
+    "birthdate": "Wed Mar 15 1995 21:54:25 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d2239d4e24f2a1c169d",
+    "firstName": "Lelia",
+    "lastName": "Neva",
+    "middleName": "Tammy",
+    "birthdate": "Mon Jan 05 1981 07:55:21 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d2208daccad4bc1e779",
+    "firstName": "White",
+    "lastName": "Osborn",
+    "middleName": "Lucile",
+    "birthdate": "Sun Feb 02 2020 15:04:02 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d229a2edb4709ae4d3c",
+    "firstName": "Jenkins",
+    "lastName": "Barton",
+    "middleName": "Lauren",
+    "birthdate": "Sun Aug 02 1970 12:12:47 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d222475f8e563bf3b1a",
+    "firstName": "Justine",
+    "lastName": "Lily",
+    "middleName": "Rosalie",
+    "birthdate": "Sat Oct 14 1978 00:02:36 GMT+0500 (Yekaterinburg Standard Time)"
+  },
+  {
+    "id": "5f6b6d22af7f437520c094fb",
+    "firstName": "Molly",
+    "lastName": "Janna",
+    "middleName": "Hill",
+    "birthdate": "Sun Oct 05 2008 20:51:14 GMT+0600 (Yekaterinburg Summer Time)"
+  }
+]
