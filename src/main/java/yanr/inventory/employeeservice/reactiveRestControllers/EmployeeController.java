@@ -38,12 +38,28 @@ public class EmployeeController {
 
     @GetMapping("/generate/{number}")
     @ResponseStatus(HttpStatus.CREATED)
-    public Flux<Employee> generateMockEmployee(@PathVariable("number") Integer number) {
+    public Flux<Employee> generateMockEmployeeAndGetThemAll(@PathVariable("number") Integer number) {
 
         List<Employee> employeeList = new ArrayList<>();
         for(int i =0; i < number; i++)
             employeeList.add(mockkEmployee((long)(Math.random() * 100L)));
         return employeeReactiveRepository.saveAll(employeeList);
+    }
+
+    @GetMapping("/gen/{number}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono<Long> generateMockEmployee(@PathVariable("number") Integer number) {
+
+        List<Employee> employeeList = new ArrayList<>();
+        for(int i =0; i < number; i++)
+            employeeList.add(mockkEmployee((long)(Math.random() * 100L)));
+        return employeeReactiveRepository.saveAll(employeeList).count();
+    }
+
+    @GetMapping("/count")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono<Long> count() {
+        return employeeReactiveRepository.count();
     }
 
     private Employee mockkEmployee(Long number) {
