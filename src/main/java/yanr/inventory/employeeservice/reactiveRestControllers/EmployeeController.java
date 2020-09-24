@@ -7,6 +7,10 @@ import reactor.core.publisher.Mono;
 import yanr.inventory.employeeservice.domain.Employee;
 import yanr.inventory.employeeservice.reactiveRepos.EmployeeReactiveRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 /**
  * @author Melton Smith
  * @since 19.09.2020
@@ -30,6 +34,42 @@ public class EmployeeController {
     @ResponseStatus(HttpStatus.CREATED)
     public Mono<Employee> postEmployee(@RequestBody Employee employee) {
         return employeeReactiveRepository.save(employee);
+    }
+
+    @GetMapping("/generate/{number}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Flux<Employee> generateMockEmployeeAndGetThemAll(@PathVariable("number") Integer number) {
+
+        List<Employee> employeeList = new ArrayList<>();
+        for(int i =0; i < number; i++)
+            employeeList.add(mockkEmployee((long)(Math.random() * 100L)));
+        return employeeReactiveRepository.saveAll(employeeList);
+    }
+
+    @GetMapping("/gen/{number}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono<Long> generateMockEmployee(@PathVariable("number") Integer number) {
+
+        List<Employee> employeeList = new ArrayList<>();
+        for(int i =0; i < number; i++)
+            employeeList.add(mockkEmployee((long)(Math.random() * 100L)));
+        return employeeReactiveRepository.saveAll(employeeList).count();
+    }
+
+    @GetMapping("/count")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono<Long> count() {
+        return employeeReactiveRepository.count();
+    }
+
+    private Employee mockkEmployee(Long number) {
+        Employee employee = new Employee();
+        employee.setId(UUID.randomUUID().toString());
+        employee.setFirstName("First name =" +  number);
+        employee.setLastName("Second name =" +  number);
+        employee.setMiddleName("Middle name =" +  number);
+        employee.setBirthDate("Birth date = "  + number);
+        return employee;
     }
 //
 //    @GetMapping("/{id}")
