@@ -30,8 +30,15 @@ management:
 
 #DeV embedded mongoDb
 spring:
+  application:
+    name: employeeService
   data:
     mongodb:
       host: localhost
       database: employeeServiceDb
       port: 12345
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/, another
