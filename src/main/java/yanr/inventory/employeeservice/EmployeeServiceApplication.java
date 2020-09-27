@@ -7,11 +7,11 @@ import reactor.core.publisher.Hooks;
 
 @SpringBootApplication
 @EnableReactiveMongoRepositories
-public class EmployeeserviceApplication {
+public class EmployeeServiceApplication {
 
     public static void main(String[] args) {
         Hooks.onOperatorDebug();
-        SpringApplication.run(EmployeeserviceApplication.class, args);
+        SpringApplication.run(EmployeeServiceApplication.class, args);
     }
 
 }
